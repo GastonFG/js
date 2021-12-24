@@ -1,51 +1,59 @@
 
-let claseJavascript2 = "Curso de Javascript - Clase 4";
-console.log(claseJavascript2);
+const claseJavascript = "Curso de Javascript - Clase 4 Complementario";
+console.log(claseJavascript);
 
+//constantes
+const valorVino = 300;
+const iva = 21;
+const descuento1 = 10;
+const descuento2 = 15;
+const descuento3 = 20;
 
-//Ingresa monto entre 10.000 y 250.000
-function ingreseMonto() {
-    montoPrestamo = parseInt(prompt("SIMULADOR DE PRÉSTAMO\nIngrese el monto (mínimo $ 10.000.- y máximo $ 250.000.-:"));
-    while((montoPrestamo < 10000) || (montoPrestamo > 250000)) {
-        alert("Debes ingresar un monto mínimo de $ 10.000.- y máximo $ 250.000.-\nIngrese solo números, no utilice puntos ni otros caracteres.");
-        montoPrestamo = parseInt(prompt("SIMULADOR DE PRÉSTAMO\nIngrese el monto (mínimo $ 10.000.- y máximo $ 250.000.-:"));
+//Ingresa cantidad de vinos, si compra 10 tiene 10% de descuento, si compra 20 tiene 15% de descuento, si compra 30 o más 20% de descuentos
+function ingresoCantidadVinos() {
+    cantidadVinos = parseInt(prompt("OFERTA VINOS $ " + valorVino + ".- + IVA x Unidad\nSi compra 10 vinos tiene " + descuento1 + "% de descuento, si compra 20 vinos tiene " + descuento2 + "% de descuento, si compra 30 o más vinos tiene " + descuento3 + "% de descuento."))
+    while((cantidadVinos % 10 != 0) || (cantidadVinos  === 0)) {
+        alert("No puede comprar esa cantidad de vinos, la cantidad de vinos debe ser múltiplo de 10.");
+        cantidadVinos = parseInt(prompt("OFERTA VINOS $ " + valorVino + ".- + IVA x Unidad\nSi compra 10 vinos tiene " + descuento1 + "% de descuento, si compra 20 vinos tiene " + descuento2 + "% de descuento, si compra 30 o más vinos tiene " + descuento3 + "% de descuento."))
     }
 }
-ingreseMonto();
+ingresoCantidadVinos();
 
 
-//Ingresa cuotas entre 1 y 24
-function ingreseCuotas() {
-    cuotasPrestamo = parseInt(prompt("Ingrese la cantidad de cuotas para su préstamo.\n(mínimo 1 cuota y máximo 24 cuotas):"));
-    while((cuotasPrestamo < 1) || (cuotasPrestamo > 24)) {
-        alert("Debes ingresar la cantidad de cuotas.\n(mínimo 1 cuota y máximo 24 cuotas).\nIngrese solo números, no utilice puntos ni otros caracteres.");
-        cuotasPrestamo = parseInt(prompt("Ingrese la cantidad de cuotas para su préstamo.\n(mínimo 1 cuota y máximo 24 cuotas):"));
+function ValorVinos() {
+    vinosSinIVA = valorVino * cantidadVinos;
+    vinosConIVA = (vinosSinIVA * iva) / 100 + vinosSinIVA;
+}
+ValorVinos()
+
+
+//Descuento según cantidad inhgresada
+function descuentoCantidad() {
+    if (cantidadVinos == 10) {
+        descuentoObtenido = descuento1;
+    }
+    else if (cantidadVinos == 20) {
+        descuentoObtenido = descuento2;
+    }
+    else {
+        descuentoObtenido = descuento3;
     }
 }
-ingreseCuotas();
+descuentoCantidad();
 
 
-//Porcentaje según cantidad de cuotas y monto total a pagar con intereses (3% mensual)
-function porcentajeSegunCuotas() {
-    porcentajeCuotas = cuotasPrestamo * 3;
-    totalIntereses = parseInt(montoPrestamo * porcentajeCuotas / 100);
-    totalPrestamo = parseInt(montoPrestamo * porcentajeCuotas / 100 + montoPrestamo);
+//Total a pagar según cantidad de vinos y descuento obtenido
+function total() {
+    totalAPagar = vinosConIVA - ((vinosConIVA / 100) * descuentoObtenido);
+    ahorro = vinosConIVA - totalAPagar;
 }
-porcentajeSegunCuotas();
-
-
-//Monto de cuota según cantidad
-function montoFinalCuota() {
-    montoCuota = parseInt(totalPrestamo / cuotasPrestamo);
-}
-montoFinalCuota();
+total()
 
 
 //Salida
-document.getElementById('montoPrestamo').innerHTML = "Monto del préstamo solicitado: <strong> $ " + montoPrestamo + ".-</strong>";
-document.getElementById('cuotasPrestamo').innerHTML = "Cantidad de cuotas: <strong>" + cuotasPrestamo + " cuota/s</strong>";
-document.getElementById('porcentajeCuotas').innerHTML = "Porcentaje según cantidad de cuotas: <strong>" + porcentajeCuotas + "%</strong>";
-document.getElementById('totalIntereses').innerHTML = "Total intereses: <strong>$ " + totalIntereses + ".-</strong>";
-document.getElementById('totalPrestamo').innerHTML = "Total préstamo más intereses: <strong>$ " + totalPrestamo + ".-</strong>";
-document.getElementById('montoCuota').innerHTML = "Usted pagará <strong>" + cuotasPrestamo + " cuota/s</strong> de <strong>$ " + montoCuota + ".-</strong>";
+document.getElementById('cantidadVinos').innerHTML = "Cantidad de vinos que va a comprar: <strong>" + cantidadVinos + " vinos</strong>";
+document.getElementById('vinosSinIVA').innerHTML = "Valor de " + cantidadVinos + " vinos sin IVA: <strong>$ " + vinosSinIVA + ".-</strong>";
+document.getElementById('vinosConIVA').innerHTML = "Valor de " + cantidadVinos + " vinos con IVA: <strong>$ " + vinosConIVA + ".-</strong>";
+document.getElementById('descuentoObtenido').innerHTML = "Descuento obtenido: <strong>" + descuentoObtenido + "%</strong>";
+document.getElementById('totalAPagar').innerHTML = "Total a pagar por " + cantidadVinos + " vinos: <strong>$ " + totalAPagar + ".- (Ahorró $ " + ahorro + ".-)</strong>";
 alert("Fin del ejercicio :)");
