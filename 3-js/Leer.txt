@@ -1,0 +1,5 @@
+Ejercicio clase 3 JS, Gastón García.
+
+Use el script anterior que adivinaba la edad y le agregué WHILE para validar lo que ingresan en los prompt y al final un FOR que se repite 5 veces sumando 10 años a la edad obtenida.
+
+Gracias por tu tiempo!

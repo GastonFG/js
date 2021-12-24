@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1 - CoderHouse</title>
+</head>
+<body>
+    <h1>Clase 1 - CoderHouse</h1>
+    <script>
+        let claseJavascript1 = "Curso de Javascript - Clase 1";
+        console.log(claseJavascript1);
+
+        //Prompt, Console y Alerts
+        //Variables
+        let miPrompt = "Prompt, Console y Alerts";
+        let nombrePrompt = prompt("Ingrese su Nombre");
+        let apellidoPrompt = prompt("Ingrese su Apellido");
+        let edadPrompt = parseInt(prompt("Ingrese su Edad"));
+        let resultado = "Me llamo " + nombrePrompt + " " + apellidoPrompt + " y tengo " + edadPrompt + " años.";
+        //Salida
+        console.log(miPrompt);
+        console.log(resultado);
+        alert(resultado);
+   
+        //Operaciones con Números
+        let operacionesConNumeros = "Operaciones con Números";
+        console.log(operacionesConNumeros);
+
+        //Variables y Constantes
+        let variableNum1 = 10;
+        let variableNum2 = 6;
+        const constNum1 = 12;
+        const constNum2 = 4;
+        const constNum3 = 2;
+
+        //Suma de Números
+        let sumaDeNumeros = "Suma de Números";
+        resultadoSuma = "10 + 6 + 12 + 4 = " + (variableNum1 + variableNum2 + constNum1 + constNum2);
+        console.log(sumaDeNumeros);
+        console.log(resultadoSuma);
+
+        //Resta de Números
+        let restaDeNumeros = "Resta de Números";
+        let resta1 = variableNum1 - variableNum2;
+        let resta2 = constNum1 - constNum2;
+        resultadoResta = "(10 - 6) - (12 - 4) = " +  (resta1 - resta2);
+        console.log(restaDeNumeros);
+        console.log(resultadoResta);
+
+        //Multiplicación de Números
+        let multiplicacionDeNumeros = "Multiplicación de Números";
+        let multiplicacion1 = variableNum1 * variableNum2;
+        resultadoMultiplicacion = "10 x 6 x 4 = " +  (multiplicacion1 * constNum2);
+        console.log(multiplicacionDeNumeros);
+        console.log(resultadoMultiplicacion);
+
+        //División de Números
+        let divisionDeNumeros = "División de Números";
+        resultadoDivision = "(10 + 6 + 12 + 4) / 2 = " +  (variableNum1 + variableNum1 + constNum1 + constNum2) / constNum3;;
+        console.log(divisionDeNumeros);
+        console.log(resultadoDivision);
+
+        //Operaciones con Textos
+        let operacionesConTextos = "Operaciones con Textos";
+        console.log(operacionesConTextos);
+
+        //Variables y Constantes
+        let palabra1 = "Mi";
+        let palabra2 = "nombre";
+        let palabra3 = "es";
+        let palabra4 = "y";
+        let palabra5 = "tengo";
+        let nombreApellido = "Gastón García";
+        let espacio = " ";
+        let miEdad = 46 + " años";
+
+        //Armo una Oración
+        let armoOracion = "Armo una Oración";
+        Oracion = palabra1 + espacio + palabra2 + espacio + palabra3 +  espacio + nombreApellido + espacio + palabra4 + espacio+ palabra5 + espacio + miEdad;
+        console.log(armoOracion);
+        console.log(Oracion);
+    </script>
+</body>
+</html>
