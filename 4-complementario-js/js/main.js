@@ -1,4 +1,3 @@
-
 const claseJavascript = "Curso de Javascript - Clase 4 Complementario";
 console.log(claseJavascript);
 
