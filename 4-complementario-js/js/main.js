@@ -19,6 +19,7 @@ function ingresoCantidadVinos() {
 ingresoCantidadVinos();
 
 
+//Obtengo valor de la cantidad de vinos sin y con IVA
 function ValorVinos() {
     vinosSinIVA = valorVino * cantidadVinos;
     vinosConIVA = (vinosSinIVA * iva) / 100 + vinosSinIVA;
