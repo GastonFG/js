@@ -142,7 +142,7 @@ function miCarrito() {
     }
     else {
         if (cantidadProducto1 == 0 || cantidadProducto2 == 0 || cantidadProducto3 == 0 || cantidadProducto4 == 0 || cantidadProducto5 == 0) {
-            alert("Ya no tenemos ese productos en stock.")
+            alert("Ya no tenemos ese producto en stock.")
             miCarrito()
         }
         else {
@@ -151,5 +151,3 @@ function miCarrito() {
     }
 }
 miCarrito();
-
-
