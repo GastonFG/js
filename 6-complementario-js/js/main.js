@@ -1,6 +1,7 @@
 const claseJavascript = "Curso de Javascript - Clase 6 Complementario";
 console.log(claseJavascript);
 
+// Array productos
 const producto = [
     { Id: 5, Producto: "Pan", Precio: 125 },
     { Id: 2, Producto: "Fideos", Precio: 70 },
@@ -8,7 +9,7 @@ const producto = [
     { Id: 4, Producto: "Salchichas", Precio: 100 },
     { Id: 3, Producto: "Galletitas", Precio: 80 }
 ];
-
+// Función seleccionar tipo de orden
 function elijoOrden() {
     let orden = prompt("LISTADO DE PRODUCTOS: \n\n"
         + producto[0].Id + " - " + producto[0].Producto + " - precio: $" + producto[0].Precio + "\n"
