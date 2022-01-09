@@ -121,6 +121,8 @@ function elijoOrden() {
         console.log("Ordenado ALFABÉTICAMENTE de la Z a la A.");
         console.log(productoAlfabeticamenteZA);
         console.table(productoAlfabeticamenteZA);
+        document.getElementById('titulo').innerHTML = "Ordenado ALFABÉTICAMENTE de la Z a la A.";
+        document.getElementById('orden').innerHTML = productoAlfabeticamenteZA;
         elijoOrden();
     }
     else {
