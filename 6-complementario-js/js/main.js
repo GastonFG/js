@@ -25,6 +25,9 @@ function elijoOrden() {
         + "5 - Si querés ordenarlos ALFABÉTICAMENTE de la A a la Z." + "\n"
         + "6 - Si querés ordenarlos ALFABÉTICAMENTE de la Z a la A" + "\n\n"
     );
+    //Vacío los ID HTML
+    document.getElementById("titulo").innerHTML = "";
+    document.getElementById("orden").innerHTML = "";
     // Ordenar por PRECIO de MENOR a MAYOR.
     if (orden == 1) {
         let precioMenorMayor = producto.slice(0);
@@ -33,10 +36,15 @@ function elijoOrden() {
             b = b.Precio;
             return a - b;
         });
-        alert("Ordenar por PRECIO de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.");
-        console.log("Ordenado por PRECIO de MENOR a MAYOR.");
-        console.log(precioMenorMayor);
-        console.table(precioMenorMayor);
+        alert("Ordenar por PRECIO de MAYOR a MENOR");
+        let recorreArray = precioMenorMayor => {
+            for (item of precioMenorMayor){
+              console.log(item);
+              document.getElementById('titulo').innerHTML = "Ordenado por PRECIO de MENOR a MAYOR.";
+              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + "- Precio: <b>" + `${item.Precio}` + "</b> <br>" ;
+            }
+        }
+        recorreArray(precioMenorMayor);
         elijoOrden();
     }
     // Ordenar por PRECIO de MAYOR a MENOR.
@@ -47,10 +55,15 @@ function elijoOrden() {
             b = b.Precio;
             return b - a;
         });
-        alert("Ordenar por PRECIO de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.");
-        console.log("Ordenado por PRECIO de MAYOR a MENOR.");
-        console.log(precioMayorMenor);
-        console.table(precioMayorMenor);
+        alert("Ordenar por PRECIO de MAYOR a MENOR");
+        let recorreArray = precioMayorMenor => {
+            for (item of precioMayorMenor){
+              console.log(item);
+              document.getElementById('titulo').innerHTML = "Ordenado por PRECIO de MAYOR a MENOR.";
+              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + "- Precio: <b>" + `${item.Precio}` + "</b> <br>" ;
+            }
+        }
+        recorreArray(precioMayorMenor);
         elijoOrden();
     }
     // Ordenar por ID de MENOR a MAYOR.
@@ -61,10 +74,15 @@ function elijoOrden() {
             b = b.Id;
             return a - b;
         });
-        alert("Ordenar por ID de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.");
-        console.log("Ordenado por ID de MENOR a MAYOR.");
-        console.log(idMenorMayor);
-        console.table(idMenorMayor);
+        alert("Ordenar por ID de MENOR a MAYOR.");
+        let recorreArray = idMenorMayor => {
+            for (item of idMenorMayor){
+              console.log(item);
+              document.getElementById('titulo').innerHTML = "Ordenado por ID de MAYOR a MENOR.";
+              document.getElementById('orden').innerHTML += "Id: <b>" + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + "</b> - Precio: " + `${item.Precio}` + "<br>" ;
+            }
+        }
+        recorreArray(idMenorMayor);
         elijoOrden();
     }
     // Ordenar por PRECIO de MAYOR a MENOR.
@@ -75,10 +93,15 @@ function elijoOrden() {
             b = b.Id;
             return b - a;
         });
-        alert("Ordenar por ID de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.");
-        console.log("Ordenado por ID de MAYOR a MENOR.");
-        console.log(idMayorMenor);
-        console.table(idMayorMenor);
+        alert("Ordenar por ID de MAYOR a MENOR.");
+        let recorreArray = idMayorMenor => {
+            for (item of idMayorMenor){
+              console.log(item);
+              document.getElementById('titulo').innerHTML = "Ordenado por ID de MAYOR a MENOR.";
+              document.getElementById('orden').innerHTML += "Id: <b>" + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + "</b> - Precio: " + `${item.Precio}` + "<br>" ;
+            }
+        }
+        recorreArray(idMayorMenor);
         elijoOrden();
     }
     // Ordenar ALFABÉTICAMENTE de la A a la Z.
@@ -88,18 +111,23 @@ function elijoOrden() {
             a = a.Producto.toLowerCase();
             b = b.Producto.toLowerCase();
             //return a < b ? -1 : a > b ? 1 : 0; Esto es igual a:
-            if (a < b){
+            if (a < b) {
                 return -1;
             }
-            if (a > b){
+            if (a > b) {
                 return 1;
             }
             return 0;
         });
-        alert("Ordenar ALFABÉTICAMENTE de la A a la Z.\n\nVER RESULTADO EN CONSOLA.");
-        console.log("Ordenado ALFABÉTICAMENTE de la A a la Z.");
-        console.log(productoAlfabeticamenteAZ);
-        console.table(productoAlfabeticamenteAZ);
+        alert("Ordenar ALFABÉTICAMENTE de la A a la Z.");
+        let recorreArray = productoAlfabeticamenteAZ => {
+            for (item of productoAlfabeticamenteAZ){
+              console.log(item);
+              document.getElementById('titulo').innerHTML = "Ordenado ALFABÉTICAMENTE de la A a la Z.";
+              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + " - Producto: <b>" + `${item.Producto}` + "</b> - Precio: " + `${item.Precio}` + "<br>" ;
+            }
+        }
+        recorreArray(productoAlfabeticamenteAZ);
         elijoOrden();
     }
     // Ordenar ALFABÉTICAMENTE de la Z a la A.
@@ -109,20 +137,23 @@ function elijoOrden() {
             a = a.Producto.toLowerCase();
             b = b.Producto.toLowerCase();
             //return a < b ? 1 : a > b ? -1 : 0; Esto es igual a:
-            if (a < b){
+            if (a < b) {
                 return 1;
             }
-            if (a > b){
+            if (a > b) {
                 return -1;
             }
             return 0;
         });
-        alert("Ordenar ALFABÉTICAMENTE de la Z a la A.\n\nVER RESULTADO EN CONSOLA.");
-        console.log("Ordenado ALFABÉTICAMENTE de la Z a la A.");
-        console.log(productoAlfabeticamenteZA);
-        console.table(productoAlfabeticamenteZA);
-        document.getElementById('titulo').innerHTML = "Ordenado ALFABÉTICAMENTE de la Z a la A.";
-        document.getElementById('orden').innerHTML = productoAlfabeticamenteZA;
+        alert("Ordenar ALFABÉTICAMENTE de la Z a la A.");
+        let recorreArray = productoAlfabeticamenteZA => {
+            for (item of productoAlfabeticamenteZA){
+              console.log(item);
+              document.getElementById('titulo').innerHTML = "Ordenado ALFABÉTICAMENTE de la Z a la A.";
+              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + " - Producto: <b>" + `${item.Producto}` + "</b> - Precio: " + `${item.Precio}` + "<br>" ;
+            }
+        }
+        recorreArray(productoAlfabeticamenteZA);
         elijoOrden();
     }
     else {
