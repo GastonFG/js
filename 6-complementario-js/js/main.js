@@ -41,7 +41,7 @@ function elijoOrden() {
             for (item of precioMenorMayor){
               console.log(item);
               document.getElementById('titulo').innerHTML = "Ordenado por PRECIO de MENOR a MAYOR.";
-              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + "- Precio: <b>" + `${item.Precio}` + "</b> <br>" ;
+              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + " - Precio: <b>" + `${item.Precio}` + "</b> <br>" ;
             }
         }
         recorreArray(precioMenorMayor);
@@ -60,7 +60,7 @@ function elijoOrden() {
             for (item of precioMayorMenor){
               console.log(item);
               document.getElementById('titulo').innerHTML = "Ordenado por PRECIO de MAYOR a MENOR.";
-              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + "- Precio: <b>" + `${item.Precio}` + "</b> <br>" ;
+              document.getElementById('orden').innerHTML += "Id: " + `${item.Id}` + "</b> - Producto: " + `${item.Producto}` + " - Precio: <b>" + `${item.Precio}` + "</b> <br>" ;
             }
         }
         recorreArray(precioMayorMenor);
