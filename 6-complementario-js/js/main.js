@@ -32,7 +32,7 @@ function elijoOrden() {
             b = b.Precio;
             return a - b;
         });
-        alert('Ordenar por PRECIO de MENOR a MAYOR. VER CONSOLA');
+        alert('Ordenar por PRECIO de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.');
         console.table(precioMenorMayor);
         elijoOrden()
     }
@@ -44,7 +44,7 @@ function elijoOrden() {
             b = b.Precio;
             return b - a;
         });
-        alert('Ordenar por PRECIO de MAYOR a MENOR. VER CONSOLA');
+        alert('Ordenar por PRECIO de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.');
         console.table(precioMayorMenor);
         elijoOrden()
     }
@@ -56,7 +56,7 @@ function elijoOrden() {
             b = b.Id;
             return a - b;
         });
-        alert('Ordenar por ID de MENOR a MAYOR. VER CONSOLA');
+        alert('Ordenar por ID de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.');
         console.table(idMenorMayor);
         elijoOrden()
     }
@@ -68,7 +68,7 @@ function elijoOrden() {
             b = b.Id;
             return b - a;
         });
-        alert('Ordenar por ID de MAYOR a MENOR. VER CONSOLA');
+        alert('Ordenar por ID de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.');
         console.table(idMayorMenor);
         elijoOrden()
     }
@@ -78,7 +78,7 @@ function elijoOrden() {
         productoAlfabeticamenteAZ.sort((a, b) => {
             a = a.Producto.toLowerCase();
             b = b.Producto.toLowerCase();
-            //return a < b ? -1 : a > b ? 1 : 0; Esto es igual a
+            //return a < b ? -1 : a > b ? 1 : 0; Esto es igual a:
             if (a < b){
                 return -1;
             }
@@ -87,7 +87,7 @@ function elijoOrden() {
             }
             return 0;
         });
-        alert('Ordenar ALFABÉTICAMENTE de la A a la Z. VER CONSOLA');
+        alert('Ordenar ALFABÉTICAMENTE de la A a la Z.\n\nVER RESULTADO EN CONSOLA.');
         console.table(productoAlfabeticamenteAZ);
         elijoOrden()
     }
@@ -97,7 +97,7 @@ function elijoOrden() {
         productoAlfabeticamenteZA.sort((a, b) => {
             a = a.Producto.toLowerCase();
             b = b.Producto.toLowerCase();
-            //return a < b ? 1 : a > b ? -1 : 0; Esto es igual a
+            //return a < b ? 1 : a > b ? -1 : 0; Esto es igual a:
             if (a < b){
                 return 1;
             }
@@ -106,8 +106,12 @@ function elijoOrden() {
             }
             return 0;
         });
-        alert('Ordenar ALFABÉTICAMENTE de la Z a la A. VER CONSOLA');
+        alert('Ordenar ALFABÉTICAMENTE de la Z a la A.\n\nVER RESULTADO EN CONSOLA.');
         console.table(productoAlfabeticamenteZA);
+        elijoOrden()
+    }
+    else {
+        alert("Debés ingresar un número del 1 al 6.");
         elijoOrden()
     }
 }
