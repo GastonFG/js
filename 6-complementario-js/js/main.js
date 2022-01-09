@@ -10,7 +10,7 @@ const producto = [
     { Id: 3, Producto: "Galletitas", Precio: 80 }
 ];
 // Función seleccionar tipo de orden
-function elijoOrden(); {
+function elijoOrden() {
     let orden = prompt("LISTADO DE PRODUCTOS: \n\n"
         + producto[0].Id + " - " + producto[0].Producto + " - precio: $" + producto[0].Precio + "\n"
         + producto[1].Id + " - " + producto[1].Producto + " - precio: $" + producto[1].Precio + "\n"
@@ -33,7 +33,7 @@ function elijoOrden(); {
             b = b.Precio;
             return a - b;
         });
-        alert('Ordenar por PRECIO de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.');
+        alert("Ordenar por PRECIO de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.");
         console.table(precioMenorMayor);
         elijoOrden();
     }
@@ -45,7 +45,7 @@ function elijoOrden(); {
             b = b.Precio;
             return b - a;
         });
-        alert('Ordenar por PRECIO de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.');
+        alert("Ordenar por PRECIO de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.");
         console.table(precioMayorMenor);
         elijoOrden();
     }
@@ -57,7 +57,7 @@ function elijoOrden(); {
             b = b.Id;
             return a - b;
         });
-        alert('Ordenar por ID de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.');
+        alert("Ordenar por ID de MENOR a MAYOR.\n\nVER RESULTADO EN CONSOLA.");
         console.table(idMenorMayor);
         elijoOrden();
     }
@@ -69,7 +69,7 @@ function elijoOrden(); {
             b = b.Id;
             return b - a;
         });
-        alert('Ordenar por ID de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.');
+        alert("Ordenar por ID de MAYOR a MENOR.\n\nVER RESULTADO EN CONSOLA.");
         console.table(idMayorMenor);
         elijoOrden();
     }
@@ -88,7 +88,7 @@ function elijoOrden(); {
             }
             return 0;
         });
-        alert('Ordenar ALFABÉTICAMENTE de la A a la Z.\n\nVER RESULTADO EN CONSOLA.');
+        alert("Ordenar ALFABÉTICAMENTE de la A a la Z.\n\nVER RESULTADO EN CONSOLA.");
         console.table(productoAlfabeticamenteAZ);
         elijoOrden();
     }
@@ -107,7 +107,7 @@ function elijoOrden(); {
             }
             return 0;
         });
-        alert('Ordenar ALFABÉTICAMENTE de la Z a la A.\n\nVER RESULTADO EN CONSOLA.');
+        alert("Ordenar ALFABÉTICAMENTE de la Z a la A.\n\nVER RESULTADO EN CONSOLA.");
         console.log("Ordenar ALFABÉTICAMENTE de la Z a la A.");
         console.log(productoAlfabeticamenteZA);
         console.table(productoAlfabeticamenteZA);
