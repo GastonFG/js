@@ -2,26 +2,39 @@
 let claseJavascript = "Curso de Javascript - Clase 5";
 console.log(claseJavascript);
 
-
-class producto {
+// CREO CLASE Y OBJETOS
+class Producto {
     constructor(productoId, nombreProducto, precioProducto, stockProducto) {
         this.productoId = productoId;
-        this.nombreProducto = nombreProducto;
+        this.nombreProducto = nombreProducto.toUpperCase();
         this.precioProducto = precioProducto;
         this.stockProducto = stockProducto;
     }
+    sumaIva() {
+        this.precioProducto = this.precioProducto * 1.21;
+    }
 }
-let producto1 = new producto(1, "Coca Cola", 200, 5);
-let producto2 = new producto(2, "Pepsi", 100, 5);
-let producto3 = new producto(3, "Fernet", 500, 5);
-let producto4 = new producto(4, "Campari", 400, 5);
-let producto5 = new producto(5, "Jack Daniels", 1000, 5);
+
+const producto1 = new Producto(1, "Coca Cola", 200, 5);
+const producto2 = new Producto(2, "Pepsi", 100, 5);
+const producto3 = new Producto(3, "Fernet", 500, 5);
+const producto4 = new Producto(4, "Campari", 400, 5);
+const producto5 = new Producto(5, "Jack Daniels", 1000, 5);
+
+producto1.sumaIva();
+producto2.sumaIva();
+producto3.sumaIva();
+producto4.sumaIva();
+producto5.sumaIva();
+
+// GUARDO VALOR INICIAL DE STOCK
 let stockProducto1 = producto1.stockProducto;
 let stockProducto2 = producto2.stockProducto;
 let stockProducto3 = producto3.stockProducto;
 let stockProducto4 = producto4.stockProducto;
 let stockProducto5 = producto5.stockProducto;
 
+// CARRITO
 function miCarrito() {
     let carrito = prompt("Ingresá el número del producto que querés comprar: \n\n"
         + producto1.productoId + " - " + producto1.nombreProducto + " - Precio: $" + producto1.precioProducto + " - Stock: " + producto1.stockProducto + "\n"
@@ -117,7 +130,7 @@ function miCarrito() {
         miCarrito()
     }
 
-    //FINALIZAR COMPRA
+    // FINALIZAR COMPRA - CÁLCULOS
     else if (carrito == "ESC") {
         let cocaColaVendidas = stockProducto1 - producto1.stockProducto;
         let valorCocaColaVendidas = cocaColaVendidas * producto1.precioProducto;
@@ -140,9 +153,11 @@ function miCarrito() {
             + "Total $ " + totalCarrito
         )
     }
+
+    //
     else {
         if (cantidadProducto1 == 0 || cantidadProducto2 == 0 || cantidadProducto3 == 0 || cantidadProducto4 == 0 || cantidadProducto5 == 0) {
-            alert("Ya no tenemos ese producto en stock.")
+            alert("Ya no tenemos ese productos en stock.")
             miCarrito()
         }
         else {
