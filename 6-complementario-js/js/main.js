@@ -108,8 +108,8 @@ function elijoOrden(); {
             return 0;
         });
         alert('Ordenar ALFABÉTICAMENTE de la Z a la A.\n\nVER RESULTADO EN CONSOLA.');
-        console("Ordenar ALFABÉTICAMENTE de la Z a la A.");
-        console(productoAlfabeticamenteZA);
+        crossOriginIsolated.log("Ordenar ALFABÉTICAMENTE de la Z a la A.");
+        console.log(productoAlfabeticamenteZA);
         console.table(productoAlfabeticamenteZA);
         elijoOrden();
     }
