@@ -1,0 +1,5 @@
+Ejercicio clase 6 JS, Gastón García.
+
+Cecilia, mejoré bastante el simulador de carrito con los array, uno de productos fijos y otro que guarda el carrito, hay muchas cosas que tengo que pulir y que en verdad encaré mal desde un comienzo y arrastré, ya lo corregiré en las próximas entregas.
+
+Gracias por tu tiempo!

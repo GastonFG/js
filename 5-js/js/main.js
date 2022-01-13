@@ -154,7 +154,7 @@ function miCarrito() {
         )
     }
     
-    // SI EL STOCK DE UN PRODUCTO ES 0, MUESTRO MENSAJE
+    // SI EL STOCK DE UN PRODUCTO ES 0, MUESTRO MENSAJE QUE YA NO HAY STOCK DE ESE PRODUCTO
     else {
         if (cantidadProducto1 == 0 || cantidadProducto2 == 0 || cantidadProducto3 == 0 || cantidadProducto4 == 0 || cantidadProducto5 == 0) {
             alert("Ya no tenemos ese productos en stock.")
